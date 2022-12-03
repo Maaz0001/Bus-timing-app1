@@ -18,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup src,dst;
     RadioButton source,destination;
     TableLayout t;
+    SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         src=findViewById(R.id.src);
@@ -39,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
                 {
                     source=findViewById(i1);
                     destination=findViewById(i2);
-                    Intent i =new Intent(MainActivity.this,table11.class);
+                    Intent tab =new Intent(MainActivity.this,table11.class);
+                    tab.putExtra("src",source.getText().toString());
+                    tab.putExtra("dst",destination.getText().toString());
+                    startActivity(tab);
                 }
             }
         });
