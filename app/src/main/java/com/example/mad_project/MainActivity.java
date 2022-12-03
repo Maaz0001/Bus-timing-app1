@@ -2,6 +2,7 @@ package com.example.mad_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TableLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button search,view;
     RadioGroup src,dst;
     RadioButton source,destination;
+    TableLayout t;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         dst=findViewById(R.id.dest);
         search=findViewById(R.id.Submit);
         view=findViewById(R.id.view);
-
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     source=findViewById(i1);
                     destination=findViewById(i2);
-
+                    Intent i =new Intent(MainActivity.this,table11.class);
                 }
             }
         });
