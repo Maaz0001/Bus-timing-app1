@@ -67,17 +67,27 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int i1=src.getCheckedRadioButtonId();
                 int i2=dst.getCheckedRadioButtonId();
-                if(i1==i2)
+                String route;
+                source=findViewById(i1);
+                destination=findViewById(i2);
+                if(source.getText().toString()==destination.getText().toString())
                 {
                     Toast.makeText(MainActivity.this, "Source and Destination cannot be same", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
-                    source=findViewById(i1);
-                    destination=findViewById(i2);
+                    if(destination.getText().toString().equals("Mangalore"))
+                    {
+                        route="R2";
+                    }
+                    else
+                    {
+                        route="R1";
+                    }
                     Intent tab =new Intent(MainActivity.this, Filtered_view.class);
                     tab.putExtra("src",source.getText().toString());
-                    tab.putExtra("route",destination.getText().toString());
+                    System.out.println("route"+destination.getText().toString());
+                    tab.putExtra("route",route);
                     startActivity(tab);
                 }
             }
