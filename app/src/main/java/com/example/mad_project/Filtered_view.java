@@ -23,7 +23,7 @@ public class Filtered_view extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.table11);
+        setContentView(R.layout.filtered_view);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
         Intent i=getIntent();
         String src=i.getStringExtra("src");
@@ -48,7 +48,7 @@ public class Filtered_view extends AppCompatActivity {
             AlertDialog.Builder ad = new AlertDialog.Builder(Filtered_view.this);
             ad.setTitle("Timings");
             ad.setMessage(result);
-
+            //ad.show();
             //Showing in Table format
             addtable(c);
         }
