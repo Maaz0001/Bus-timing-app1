@@ -4,19 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TableLayout;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
@@ -64,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         //end of importing
 
+        //Filtering
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,14 +75,16 @@ public class MainActivity extends AppCompatActivity {
                 {
                     source=findViewById(i1);
                     destination=findViewById(i2);
-                    Intent tab =new Intent(MainActivity.this,table11.class);
+                    Intent tab =new Intent(MainActivity.this, Filtered_view.class);
                     tab.putExtra("src",source.getText().toString());
-                    tab.putExtra("dst",destination.getText().toString());
+                    tab.putExtra("route",destination.getText().toString());
                     startActivity(tab);
                 }
             }
         });
 
+
+        //View All
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
