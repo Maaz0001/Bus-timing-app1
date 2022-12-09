@@ -39,20 +39,6 @@
             android:text="Mangalore"
             android:textAlignment="viewStart" />
 
-        <RadioButton
-            android:id="@+id/s3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Padubidri"
-            android:textAlignment="viewStart" />
-
-        <RadioButton
-            android:id="@+id/s4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Udupi"
-            android:textAlignment="viewStart" />
-
     </RadioGroup>
 
     <TextView
@@ -123,20 +109,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mangalore"
-            android:textAlignment="viewStart" />
-
-        <RadioButton
-            android:id="@+id/d3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Padubidri"
-            android:textAlignment="viewStart" />
-
-        <RadioButton
-            android:id="@+id/d4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Udupi"
             android:textAlignment="viewStart" />
 
     </RadioGroup>

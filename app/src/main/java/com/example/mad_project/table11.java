@@ -15,10 +15,5 @@ public class table11 extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.table11);
-        t=findViewById(R.id.tableLayout);
-        String src =getIntent().getStringExtra("src");
-        String dst =getIntent().getStringExtra("dst");
-
-
     }
 }

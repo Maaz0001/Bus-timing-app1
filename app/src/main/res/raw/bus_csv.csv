@@ -1,16 +1,26 @@
-Bus Name ,Bus Time,Source
-Navadurga Prasad,2:42:00 AM,Lamina
-Vishal,4:55:00 AM,Lamina
-Vishal,11:36:00 AM,Lamina
-Vishal,3:47:00 PM,Lamina
-Ayra,4:05:00 PM,Lamina
-Vishal,5:50:00 AM,Nitte
-Vishal,11:40:00 AM,Nitte
-Laxmi ganesh,1:57:00 PM,Nitte
-Navadurga Prasad,2:45:00 PM,Nitte
-Padmambika,2:57:00 PM,Nitte
-Vishal,3:36:00 PM,Nitte
-Vishal,3:49:00 PM,Nitte
-Padmambika,4:03:00 PM,Nitte
-Ayra,4:08:00 PM,Nitte
-Reshma,6:10:00 PM,Nitte
+Slno,Bus Name ,Bus Time,Source,Route
+1,Navadurga Prasad,2:42:00 AM,Nitte,R2
+2,Vishal,4:55:00 AM,Nitte,R2
+3,Vishal,11:36:00 AM,Nitte,R2
+4,Vishal,3:47:00 PM,Nitte,R2
+5,Ayra,4:05:00 PM,Nitte,R2
+6,Vishal,5:50:00 AM,Nitte,R2
+7,Vishal,11:40:00 AM,Nitte,R2
+8,Laxmi ganesh,1:57:00 PM,Nitte,R2
+9,Navadurga Prasad,2:45:00 PM,Nitte,R2
+10,Padmambika,2:57:00 PM,Nitte,R2
+11,Vishal,3:36:00 PM,Nitte,R2
+12,Vishal,3:49:00 PM,Nitte,R2
+13,Padmambika,4:03:00 PM,Nitte,R2
+14,Ayra,4:08:00 PM,Nitte,R2
+15,Reshma,6:10:00 PM,Nitte,R2
+16,Vishal,7:20:00 AM,Mangalore,R1
+17,Vishal,7:35:00 AM,Mangalore,R1
+18,Laxmi ganesh,1:35:00 AM,Mangalore,R1
+19,Navadurga Prasad,5:35:00 AM,Mangalore,R1
+20,Padmambika,11:35:00 AM,Mangalore,R1
+21,Vishal,9:35:00 AM,Mangalore,R1
+22,Vishal,4:35:00 PM,Mangalore,R1
+23,Padmambika,1:35:00 PM,Mangalore,R1
+24,Ayra,5:35:00 PM,Mangalore,R1
+25,Reshma,5:00:00 PM,Mangalore,R1
