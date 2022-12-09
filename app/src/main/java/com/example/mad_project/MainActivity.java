@@ -37,15 +37,8 @@ public class MainActivity extends AppCompatActivity {
         view=findViewById(R.id.view);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
         db.execSQL("create table if not Exists BusTiming(Slno int primary key,BusName varchar(15),BusTime time,Source varchar(15),Route varchar(2))");
-        String mCSVfile = "file.csv";
-        AssetManager manager = this.getAssets();
-        InputStream inStream = null;
-        try {
-            inStream = manager.open(mCSVfile);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         //importing the csv
+        InputStream inStream=this.getResources().openRawResource(R.raw.bus_csv);
         BufferedReader buffer= new BufferedReader(new InputStreamReader(inStream));
         String line = "";
         db.beginTransaction();
@@ -56,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
                     continue;
                 }
                 ContentValues cv = new ContentValues();
-                cv.put("dbCol0", colums[0].trim());
-                cv.put("dbCol1", colums[1].trim());
-                cv.put("dbCol2", colums[2].trim());
-                cv.put("dbCol3", colums[3].trim());
-                cv.put("dbCol4", colums[4].trim());
+                cv.put("Slno", colums[0].trim());
+                cv.put("BusName", colums[1].trim());
+                cv.put("BusTime", colums[2].trim());
+                cv.put("Source", colums[3].trim());
+                cv.put("Route", colums[4].trim());
                 db.insert("BusTiming", null, cv);
             }
         } catch (Exception e) {
@@ -69,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         db.setTransactionSuccessful();
         db.endTransaction();
 
-        //
+        //end of importing
 
         search.setOnClickListener(new View.OnClickListener() {
             @Override
