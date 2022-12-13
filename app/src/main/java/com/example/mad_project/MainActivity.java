@@ -18,10 +18,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
-    Button search,view;
+    Button search,view,addentry;
     RadioGroup src,dst;
     RadioButton source,destination;
-    TableLayout t;
     SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         dst=findViewById(R.id.dest);
         search=findViewById(R.id.Submit);
         view=findViewById(R.id.view);
+        addentry=findViewById(R.id.addentry);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
         db.execSQL("create table if not Exists BusTiming(Slno int primary key,BusName varchar(15),BusTime time,Source varchar(15),Route varchar(2))");
         //importing the csv
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 int i1=src.getCheckedRadioButtonId();
                 int i2=dst.getCheckedRadioButtonId();
                 String route;
@@ -80,9 +81,13 @@ public class MainActivity extends AppCompatActivity {
                     {
                         route="R2";
                     }
-                    else
+                    else if(destination.getText().toString().equals("Nitte"))
                     {
                         route="R1";
+                    }
+                    else
+                    {
+                        route="R3";
                     }
                     Intent tab =new Intent(MainActivity.this, Filtered_view.class);
                     tab.putExtra("src",source.getText().toString());
@@ -98,7 +103,18 @@ public class MainActivity extends AppCompatActivity {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent va=new Intent(MainActivity.this,ViewAll.class);
+                startActivity(va);
 
+            }
+        });
+
+        //adding Entry
+        addentry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ae=new Intent(MainActivity.this,Add_Entry.class);
+                startActivity(ae);
             }
         });
     }

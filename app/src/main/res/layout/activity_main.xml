@@ -39,6 +39,12 @@
             android:text="Mangalore"
             android:textAlignment="viewStart" />
 
+        <RadioButton
+            android:id="@+id/s3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Udupi" />
+
     </RadioGroup>
 
     <TextView
@@ -66,6 +72,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.849" />
+
+    <Button
+        android:id="@+id/addentry"
+        android:layout_width="266dp"
+        android:layout_height="69dp"
+        android:text="Add Entry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.712" />
 
     <Button
         android:id="@+id/view"
@@ -111,6 +129,12 @@
             android:text="Mangalore"
             android:textAlignment="viewStart" />
 
+        <RadioButton
+            android:id="@+id/d3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Udupi" />
+
     </RadioGroup>
 
     <TextView
@@ -128,6 +152,19 @@
 
     <TextView
         android:id="@+id/r"
+        android:layout_width="344dp"
+        android:layout_height="31dp"
+        android:gravity="center"
+        android:text="Route 3: To Udupi (R3)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TextView
+        android:id="@+id/r2"
         android:layout_width="344dp"
         android:layout_height="31dp"
         android:gravity="center"

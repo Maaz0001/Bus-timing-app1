@@ -25,8 +25,19 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".Filtered_view"
-            android:label="Preferences">
+        <activity
+            android:name=".Filtered_view"
+            android:label="BusTiming">
+        </activity>
+        <activity
+            android:name=".ViewAll"
+            android:label="All Timings">
+
+        </activity>
+        <activity
+            android:name=".Add_Entry"
+            android:label="Add Entries">
+
         </activity>
     </application>
 
