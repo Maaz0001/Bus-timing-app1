@@ -18,6 +18,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.463" />
 
+    <Button
+        android:id="@+id/submit_Entry"
+        android:layout_width="306dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <RadioGroup
         android:id="@+id/busname"
         android:layout_width="159dp"
@@ -30,37 +43,31 @@
         app:layout_constraintVertical_bias="0.072">
 
         <RadioButton
-            android:id="@+id/l1"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Vishal" />
 
         <RadioButton
-            android:id="@+id/l2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Reshma" />
 
         <RadioButton
-            android:id="@+id/l3"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Navadurga Prasad" />
 
         <RadioButton
-            android:id="@+id/l4"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Laxmi Ganesh" />
 
         <RadioButton
-            android:id="@+id/l5"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Padmambika" />
 
         <RadioButton
-            android:id="@+id/l6"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Ayra" />
@@ -82,21 +89,6 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="164dp"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:text="Source"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.636" />
-
-    <TextView
         android:id="@+id/textView9"
         android:layout_width="164dp"
         android:layout_height="48dp"
@@ -109,33 +101,34 @@
         app:layout_constraintHorizontal_bias="0.935"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.636" />
+        app:layout_constraintVertical_bias="0.588" />
 
     <TextView
-        android:id="@+id/tview"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
+        android:id="@+id/textView6"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
         android:gravity="center"
-        android:hint="Time"
+        android:text="Source"
         android:textColor="#000000"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396" />
-
-    <RadioGroup
-        android:id="@+id/sources"
-        android:layout_width="163dp"
-        android:layout_height="187dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887">
+        app:layout_constraintVertical_bias="0.588" />
+
+    <RadioGroup
+        android:id="@+id/sources"
+        android:layout_width="163dp"
+        android:layout_height="187dp"
+        android:checkedButton="@id/radioButton9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827">
 
         <RadioButton
             android:id="@+id/radioButton9"
@@ -160,12 +153,13 @@
         android:id="@+id/destinations"
         android:layout_width="161dp"
         android:layout_height="191dp"
+        android:checkedButton="@id/radioButton12"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.936"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894">
+        app:layout_constraintVertical_bias="0.833">
 
         <RadioButton
             android:id="@+id/radioButton12"
@@ -186,11 +180,26 @@
             android:text="Nitte" />
     </RadioGroup>
 
+    <TextView
+        android:id="@+id/tview"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:hint="Time"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396" />
+
     <Button
         android:id="@+id/gback3"
         android:layout_width="104dp"
         android:layout_height="47dp"
-        android:backgroundTint="#009688"
+        android:backgroundTint="#00BCD4"
         android:text="Return"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -10,6 +10,7 @@
         android:id="@+id/src"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
+        android:checkedButton="@id/s1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.052"
@@ -20,8 +21,9 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:gravity="left"
             android:text="Source"
-            android:textAlignment="center"
+            android:textAlignment="inherit"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -29,77 +31,98 @@
             android:id="@+id/s1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="false"
             android:text="Nitte"
-            android:textAlignment="viewStart" />
+            android:textAlignment="viewStart"
+            tools:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/s2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mangalore"
-            android:textAlignment="viewStart" />
+            android:textAlignment="viewStart"
+            tools:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/s3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Udupi" />
+            android:text="Udupi"
+            tools:textAlignment="center" />
 
     </RadioGroup>
 
     <TextView
         android:id="@+id/app_title"
-        android:layout_width="277dp"
-        android:layout_height="92dp"
+        android:layout_width="276dp"
+        android:layout_height="64dp"
+        android:fontFamily="cursive"
+        android:gravity="center"
         android:text="Bus Timings"
         android:textColor="#DC0C0C"
-        android:textSize="43dp"
+        android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039"
+        app:layout_constraintVertical_bias="0.099"
         tools:flow_verticalAlign="center"
         tools:textAlignment="center" />
 
     <Button
         android:id="@+id/Submit"
-        android:layout_width="266dp"
-        android:layout_height="69dp"
+        android:layout_width="133dp"
+        android:layout_height="50dp"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintVertical_bias="0.962" />
 
     <Button
         android:id="@+id/addentry"
         android:layout_width="266dp"
-        android:layout_height="69dp"
+        android:layout_height="51dp"
         android:text="Add Entry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.712" />
+        app:layout_constraintVertical_bias="0.841" />
+
+    <Button
+        android:id="@+id/refresh_data"
+        android:layout_width="266dp"
+        android:layout_height="51dp"
+        android:text="Reset Database"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 
     <Button
         android:id="@+id/view"
-        android:layout_width="266dp"
-        android:layout_height="69dp"
+        android:layout_width="133dp"
+        android:layout_height="50dp"
         android:text="View Full "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
+        app:layout_constraintVertical_bias="0.963" />
 
     <RadioGroup
         android:id="@+id/dest"
         android:layout_width="190dp"
         android:layout_height="wrap_content"
+        android:checkedButton="@id/d2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.927"
@@ -110,8 +133,9 @@
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:gravity="left"
             android:text="Destination"
-            android:textAlignment="center"
+            android:textAlignment="inherit"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -120,20 +144,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nitte"
-            android:textAlignment="viewStart" />
+            android:textAlignment="viewStart"
+            tools:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/d2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mangalore"
-            android:textAlignment="viewStart" />
+            android:textAlignment="viewStart"
+            tools:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/d3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Udupi" />
+            android:text="Udupi"
+            tools:textAlignment="center" />
 
     </RadioGroup>
 
@@ -175,5 +202,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.241" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="65dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

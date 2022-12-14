@@ -1,8 +1,5 @@
 package com.example.mad_project;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -10,15 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TableLayout;
 import android.widget.Toast;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button search,view,addentry;
+    Button search,view,addentry,refresh_button;
     RadioGroup src,dst;
     RadioButton source,destination;
     SQLiteDatabase db;
@@ -32,32 +26,33 @@ public class MainActivity extends AppCompatActivity {
         search=findViewById(R.id.Submit);
         view=findViewById(R.id.view);
         addentry=findViewById(R.id.addentry);
+        refresh_button=findViewById(R.id.refresh_data);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
-        db.execSQL("create table if not Exists BusTiming(Slno int primary key,BusName varchar(15),BusTime time,Source varchar(15),Route varchar(2))");
-        //importing the csv
-        InputStream inStream=this.getResources().openRawResource(R.raw.bus_csv);
-        BufferedReader buffer= new BufferedReader(new InputStreamReader(inStream));
-        String line = "";
-        db.beginTransaction();
-        try {
-            while ((line = buffer.readLine()) != null) {
-                String[] colums = line.split(",");
-                if (colums.length != 5) {
-                    continue;
-                }
-                ContentValues cv = new ContentValues();
-                cv.put("Slno", colums[0].trim());
-                cv.put("BusName", colums[1].trim());
-                cv.put("BusTime", colums[2].trim());
-                cv.put("Source", colums[3].trim());
-                cv.put("Route", colums[4].trim());
-                db.insert("BusTiming", null, cv);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        db.setTransactionSuccessful();
-        db.endTransaction();
+        //db.execSQL("create table if not Exists BusTiming(Slno int primary key,BusName varchar(15),BusTime time,Source varchar(15),Route varchar(2))");
+        ////importing the csv
+        //InputStream inStream=this.getResources().openRawResource(R.raw.bus_csv);
+        //BufferedReader buffer= new BufferedReader(new InputStreamReader(inStream));
+        //String line = "";
+        //db.beginTransaction();
+        //try {
+        //    while ((line = buffer.readLine()) != null) {
+        //        String[] colums = line.split(",");
+        //        if (colums.length != 5) {
+        //            continue;
+        //        }
+        //        ContentValues cv = new ContentValues();
+        //        cv.put("Slno", colums[0].trim());
+        //        cv.put("BusName", colums[1].trim());
+        //        cv.put("BusTime", colums[2].trim());
+        //        cv.put("Source", colums[3].trim());
+        //        cv.put("Route", colums[4].trim());
+        //        db.insert("BusTiming", null, cv);
+        //    }
+        //} catch (Exception e) {
+        //    e.printStackTrace();
+        //}
+        //db.setTransactionSuccessful();
+        //db.endTransaction();
 
         //end of importing
 
@@ -115,6 +110,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent ae=new Intent(MainActivity.this,Add_Entry.class);
                 startActivity(ae);
+            }
+        });
+        refresh_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }

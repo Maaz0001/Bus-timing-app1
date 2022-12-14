@@ -7,6 +7,8 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -19,11 +21,12 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Filtered_view extends AppCompatActivity {
     SQLiteDatabase db;
     TableLayout tl;
-    TableRow r;
+    Button ret;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filtered_view);
+        ret=findViewById(R.id.gback1);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
         Intent i=getIntent();
         String src=i.getStringExtra("src");
@@ -116,7 +119,12 @@ public class Filtered_view extends AppCompatActivity {
 
             tl.addView(tr);
         } while (c.moveToNext());
-
+        ret.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
 
     }

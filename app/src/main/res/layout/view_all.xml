@@ -3,40 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Filtered_view">
 
+    <Button
+        android:id="@+id/gback2"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Return"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ScrollView
         android:id="@+id/ScrollView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:isScrollContainer="false"
         android:textAlignment="gravity">
 
-        <HorizontalScrollView
-            android:id="@+id/hscroll"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:id="@+id/RelLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|top">
+            android:layout_gravity="center|fill"
+            android:isScrollContainer="true"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/RelLayout"
+            <TableLayout
+                android:id="@+id/mainTable"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_gravity="center">
+                android:layout_height="match_parent"
+                android:layout_marginTop="60dp"
+                android:gravity="center">
 
-                <TableLayout
-                    android:id="@+id/mainTable"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="60dp"
-                    android:gravity="center">
-
-                </TableLayout>
-            </RelativeLayout>
-        </HorizontalScrollView>
+            </TableLayout>
+        </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

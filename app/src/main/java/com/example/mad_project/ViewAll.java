@@ -6,6 +6,8 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -17,12 +19,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ViewAll extends AppCompatActivity{
     SQLiteDatabase db;
     TableLayout tl;
+    Button ret;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_all);
+        ret=findViewById(R.id.gback2);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
-        Cursor c=db.rawQuery("Select * from BusTiming",null);
+        Cursor c=db.rawQuery("Select * from BusTiming Order by Route",null);
         if(c.getCount()==0)
         {
             Toast.makeText(this, "Does not exist", Toast.LENGTH_SHORT).show();
@@ -59,14 +63,31 @@ public class ViewAll extends AppCompatActivity{
             h3.setTypeface(Typeface.DEFAULT_BOLD);
             h3.setTextColor(Color.RED);
             tr0.addView(h3);
+
+
             //end of Header
             tl.addView(tr0);
             c.moveToFirst();
             c.moveToNext();
             do {
+
                 String v1 = c.getString(1);
                 String v2 = c.getString(2);
                 String v3 = c.getString(3);
+                String v4="";
+                if(v1.equals("Bus Name"))
+                    break;
+                switch(c.getString(4))
+                {
+                    case "R1":
+                        v4="Nitte";
+                        break;
+                    case "R2":
+                        v4="Mangalore";
+                        break;
+                    case "R3":
+                        v4="Udupi";
+                }
                 TableRow tr=new TableRow(this);
                 TextView tv1=new TextView(this);
                 tv1.setText(v1+"\t\t\t\t");
@@ -81,15 +102,23 @@ public class ViewAll extends AppCompatActivity{
                 tr.addView(tv2);
 
                 TextView tv3=new TextView(this);
-                tv3.setText(v3+"\t\t\t\t");
+                tv3.setText(v3+" To "+v4+"\t\t\t\t");
                 tv3.setGravity(Gravity.CENTER);
                 tv3.setTextColor(Color.BLACK);
                 tr.addView(tv3);
+
 
                 tl.addView(tr);
             } while (c.moveToNext());
 
         }
+        ret.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
+
 }
