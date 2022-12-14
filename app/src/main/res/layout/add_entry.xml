@@ -17,8 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.463" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/submit_Entry"
@@ -37,44 +36,50 @@
         android:id="@+id/busname"
         android:layout_width="159dp"
         android:layout_height="190dp"
+        android:checkedButton="@id/b1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072">
+        app:layout_constraintVertical_bias="0.182">
 
         <RadioButton
+            android:id="@+id/b1"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Vishal"
             android:textColor="#000000" />
 
         <RadioButton
+            android:id="@+id/b2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Reshma"
             android:textColor="#000000" />
 
         <RadioButton
+            android:id="@+id/b3"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Navadurga Prasad"
             android:textColor="#000000" />
 
         <RadioButton
+            android:id="@+id/b4"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Laxmi Ganesh"
             android:textColor="#000000" />
 
         <RadioButton
+            android:id="@+id/b5"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Padmambika"
             android:textColor="#000000" />
 
         <RadioButton
+            android:id="@+id/b6"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Ayra"
@@ -83,18 +88,18 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="154dp"
-        android:layout_height="23dp"
+        android:layout_width="163dp"
+        android:layout_height="38dp"
         android:gravity="center"
         android:text="Bus Name"
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.088" />
 
     <TextView
         android:id="@+id/textView9"
@@ -196,23 +201,24 @@
 
     <TextView
         android:id="@+id/tview"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
+        android:layout_width="196dp"
+        android:layout_height="37dp"
         android:gravity="center"
         android:hint="Time"
         android:textColor="#000000"
+        android:textColorHint="#000000"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintVertical_bias="0.435" />
 
     <Button
         android:id="@+id/gback3"
-        android:layout_width="104dp"
-        android:layout_height="47dp"
+        android:layout_width="410dp"
+        android:layout_height="46dp"
         android:backgroundTint="#00BCD4"
         android:text="Return"
         app:layout_constraintBottom_toBottomOf="parent"

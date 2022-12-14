@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:background="#FFFFFF">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -19,7 +20,7 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
+        style="@android:style/Widget.Material.Light.ProgressBar.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,6 +48,7 @@
         android:id="@+id/textView5"
         android:layout_width="217dp"
         android:layout_height="34dp"
+        android:fontFamily="cursive"
         android:gravity="center"
         android:text="K.Tushar.Pai"
         android:textColor="#000000"
@@ -61,6 +63,7 @@
         android:id="@+id/textView4"
         android:layout_width="217dp"
         android:layout_height="34dp"
+        android:fontFamily="cursive"
         android:gravity="center"
         android:text="Maaz Abdul Munaf"
         android:textColor="#000000"
