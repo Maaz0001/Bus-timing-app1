@@ -13,14 +13,20 @@
         android:theme="@style/Theme.MAD_Project"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:label="Bus Time Table"
+            android:name=".SplashActi"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Bus Time Table"
+            >
+
 
             <meta-data
                 android:name="android.app.lib_name"
@@ -40,6 +46,8 @@
             android:label="Add Entries">
 
         </activity>
+
+
 
     </application>
 
