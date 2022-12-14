@@ -26,7 +26,7 @@ public class ViewAll extends AppCompatActivity{
         setContentView(R.layout.view_all);
         ret=findViewById(R.id.gback2);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
-        Cursor c=db.rawQuery("Select * from BusTiming Order by Route",null);
+        Cursor c=db.rawQuery("Select * from BusTiming order by Route,Source,BusTime",null);
         if(c.getCount()==0)
         {
             Toast.makeText(this, "Does not exist", Toast.LENGTH_SHORT).show();
@@ -64,6 +64,7 @@ public class ViewAll extends AppCompatActivity{
             h3.setTextColor(Color.RED);
             tr0.addView(h3);
 
+            tl.setBackgroundColor(Color.WHITE);
 
             //end of Header
             tl.addView(tr0);

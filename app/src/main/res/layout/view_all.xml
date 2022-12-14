@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context=".Filtered_view">
 
@@ -24,26 +25,31 @@
         android:id="@+id/ScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:isScrollContainer="false"
+        android:isScrollContainer="true"
         android:textAlignment="gravity">
 
-        <LinearLayout
-            android:id="@+id/RelLayout"
+        <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|fill"
-            android:isScrollContainer="true"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <TableLayout
-                android:id="@+id/mainTable"
-                android:layout_width="fill_parent"
+            <LinearLayout
+                android:id="@+id/RelLayout"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginTop="60dp"
-                android:gravity="center">
+                android:layout_gravity="center|fill"
+                android:isScrollContainer="true"
+                android:orientation="vertical">
 
-            </TableLayout>
-        </LinearLayout>
+                <TableLayout
+                    android:id="@+id/mainTable"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="60dp"
+                    android:gravity="center">
+
+                </TableLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
     </ScrollView>
 
 </LinearLayout>

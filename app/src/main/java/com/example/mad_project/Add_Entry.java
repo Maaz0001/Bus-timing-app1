@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class Add_Entry extends AppCompatActivity {
     SQLiteDatabase db;
@@ -23,11 +24,11 @@ public class Add_Entry extends AppCompatActivity {
     Button tim,sub,ret_ent;
     TextView time_text;
     String bus_name,src_name,dst_name;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_entry);
-
         //Radio groups
         sources=findViewById(R.id.sources);
         destination=findViewById(R.id.destinations);
@@ -153,6 +154,7 @@ public class Add_Entry extends AppCompatActivity {
                     cv.put("Route",route);
                     db.insert("BusTiming",null,cv);
                     Toast.makeText(Add_Entry.this, "Inserted Successfully", Toast.LENGTH_SHORT).show();
+                    finish();
 
                 }
             }
@@ -160,6 +162,7 @@ public class Add_Entry extends AppCompatActivity {
         ret_ent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 finish();
             }
         });

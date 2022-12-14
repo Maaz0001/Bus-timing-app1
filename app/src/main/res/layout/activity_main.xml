@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAFAFA"
     tools:context=".MainActivity">
 
     <RadioGroup
@@ -24,6 +25,7 @@
             android:gravity="left"
             android:text="Source"
             android:textAlignment="inherit"
+            android:textColor="#000000"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -34,6 +36,8 @@
             android:checked="false"
             android:text="Nitte"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textStyle="bold"
             tools:textAlignment="center" />
 
         <RadioButton
@@ -42,6 +46,8 @@
             android:layout_height="wrap_content"
             android:text="Mangalore"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textStyle="bold"
             tools:textAlignment="center" />
 
         <RadioButton
@@ -49,6 +55,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Udupi"
+            android:textColor="#000000"
+            android:textStyle="bold"
             tools:textAlignment="center" />
 
     </RadioGroup>
@@ -74,18 +82,20 @@
         android:id="@+id/Submit"
         android:layout_width="133dp"
         android:layout_height="50dp"
+        android:backgroundTint="#3F51B5"
         android:text="Search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.118"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.963" />
 
     <Button
         android:id="@+id/addentry"
         android:layout_width="266dp"
         android:layout_height="51dp"
+        android:backgroundTint="#3F51B5"
         android:text="Add Entry"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,6 +108,7 @@
         android:id="@+id/refresh_data"
         android:layout_width="266dp"
         android:layout_height="51dp"
+        android:backgroundTint="#3F51B5"
         android:text="Reset Database"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,10 +121,11 @@
         android:id="@+id/view"
         android:layout_width="133dp"
         android:layout_height="50dp"
+        android:backgroundTint="#3F51B5"
         android:text="View Full "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.737"
+        app:layout_constraintHorizontal_bias="0.877"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.963" />
@@ -136,6 +148,7 @@
             android:gravity="left"
             android:text="Destination"
             android:textAlignment="inherit"
+            android:textColor="#000000"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -145,6 +158,8 @@
             android:layout_height="wrap_content"
             android:text="Nitte"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textStyle="bold"
             tools:textAlignment="center" />
 
         <RadioButton
@@ -153,6 +168,8 @@
             android:layout_height="wrap_content"
             android:text="Mangalore"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
+            android:textStyle="bold"
             tools:textAlignment="center" />
 
         <RadioButton
@@ -160,6 +177,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Udupi"
+            android:textColor="#000000"
+            android:textStyle="bold"
             tools:textAlignment="center" />
 
     </RadioGroup>
@@ -170,6 +189,8 @@
         android:layout_height="31dp"
         android:gravity="center"
         android:text="Route 1: To Nitte (R1)"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -183,6 +204,8 @@
         android:layout_height="31dp"
         android:gravity="center"
         android:text="Route 3: To Udupi (R3)"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -196,6 +219,8 @@
         android:layout_height="31dp"
         android:gravity="center"
         android:text="Route 2: To Mangalore (R2)"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"

@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#DAD7D7">
 
     <Button
         android:id="@+id/time"
@@ -45,32 +47,38 @@
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Vishal" />
+            android:text="Vishal"
+            android:textColor="#000000" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Reshma" />
+            android:text="Reshma"
+            android:textColor="#000000" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Navadurga Prasad" />
+            android:text="Navadurga Prasad"
+            android:textColor="#000000" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Laxmi Ganesh" />
+            android:text="Laxmi Ganesh"
+            android:textColor="#000000" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Padmambika" />
+            android:text="Padmambika"
+            android:textColor="#000000" />
 
         <RadioButton
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:text="Ayra" />
+            android:text="Ayra"
+            android:textColor="#000000" />
     </RadioGroup>
 
     <TextView
@@ -134,19 +142,22 @@
             android:id="@+id/radioButton9"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Mangalore" />
+            android:text="Mangalore"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/radioButton10"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Udupi" />
+            android:text="Udupi"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/radioButton11"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Nitte" />
+            android:text="Nitte"
+            android:textColor="#000000" />
     </RadioGroup>
 
     <RadioGroup
@@ -165,19 +176,22 @@
             android:id="@+id/radioButton12"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Mangalore" />
+            android:text="Mangalore"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/radioButton13"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Udupi" />
+            android:text="Udupi"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/radioButton14"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Nitte" />
+            android:text="Nitte"
+            android:textColor="#000000" />
     </RadioGroup>
 
     <TextView
