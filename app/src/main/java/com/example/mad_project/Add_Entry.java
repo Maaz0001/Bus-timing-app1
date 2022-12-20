@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -16,12 +17,14 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+//Edit timing
 
 public class Add_Entry extends AppCompatActivity {
     SQLiteDatabase db;
     RadioGroup sources,destination,buses;
     RadioButton src,dst,bus;
-    Button tim,sub,ret_ent;
+    Button tim,sub;
+    ImageButton ret_ent;
     TextView time_text;
     String bus_name,src_name,dst_name;
 

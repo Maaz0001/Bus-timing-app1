@@ -7,7 +7,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -19,7 +19,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ViewAll extends AppCompatActivity{
     SQLiteDatabase db;
     TableLayout tl;
-    Button ret;
+    //Button ret;
+    ImageButton ret;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

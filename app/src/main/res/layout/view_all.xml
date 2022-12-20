@@ -8,18 +8,12 @@
     android:orientation="vertical"
     tools:context=".Filtered_view">
 
-    <Button
+    <ImageButton
         android:id="@+id/gback2"
-        android:layout_width="match_parent"
-        android:layout_height="47dp"
-        android:backgroundTint="#00BCD4"
-        android:text="Return"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_width="73dp"
+        android:layout_height="50dp"
+        android:background="#00BCD4"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
     <ScrollView
         android:id="@+id/ScrollView"
