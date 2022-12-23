@@ -46,8 +46,11 @@
             android:label="Add Entries">
 
         </activity>
+        <activity
+            android:name=".Mod_entry"
+            android:label="Modify">
 
-
+        </activity>
 
     </application>
 

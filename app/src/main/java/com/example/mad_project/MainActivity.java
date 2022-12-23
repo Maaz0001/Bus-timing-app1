@@ -19,7 +19,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
-    Button search,view,addentry,refresh_button;
+    Button search,view,addentry,refresh_button,modify;
     RadioGroup src,dst;
     RadioButton source,destination;
     SQLiteDatabase db;
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         view=findViewById(R.id.view);
         addentry=findViewById(R.id.addentry);
         refresh_button=findViewById(R.id.refresh_data);
+        modify=findViewById(R.id.modentry);
         db=openOrCreateDatabase("BusTiming",MODE_PRIVATE,null);
         //Filtering
         search.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +123,13 @@ public class MainActivity extends AppCompatActivity {
                 db.endTransaction();
                 Toast.makeText(MainActivity.this, "Successfully Reset The Database", Toast.LENGTH_SHORT).show();
 
+            }
+        });
+        modify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ae=new Intent(MainActivity.this,Mod_entry.class);
+                startActivity(ae);
             }
         });
 

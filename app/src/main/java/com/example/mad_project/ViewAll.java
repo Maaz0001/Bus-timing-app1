@@ -38,9 +38,17 @@ public class ViewAll extends AppCompatActivity{
             tl=findViewById(R.id.mainTable);
             TableRow tr0=new TableRow(this);
             //Headers
+
+
+            TextView h0=new TextView(this);
+            h0.setText("Sl No \t\t\t\t");
+            h0.setGravity(Gravity.CENTER);
+            h0.setTextSize(25);
+            h0.setTypeface(Typeface.DEFAULT_BOLD);
+            h0.setTextColor(Color.RED);
+            tr0.addView(h0);
+
             TextView h1=new TextView(this);
-
-
             h1.setText("Bus Name \t\t\t\t");
             h1.setGravity(Gravity.CENTER);
             h1.setTextSize(25);
@@ -72,7 +80,7 @@ public class ViewAll extends AppCompatActivity{
             c.moveToFirst();
             c.moveToNext();
             do {
-
+                String v0 = c.getString(0);
                 String v1 = c.getString(1);
                 String v2 = c.getString(2);
                 String v3 = c.getString(3);
@@ -91,6 +99,12 @@ public class ViewAll extends AppCompatActivity{
                         v4="Udupi";
                 }
                 TableRow tr=new TableRow(this);
+                TextView tv0=new TextView(this);
+                tv0.setText(v0+"\t\t\t\t");
+                tv0.setGravity(Gravity.CENTER);
+                tv0.setTextColor(Color.BLACK);
+                tr.addView(tv0);
+
                 TextView tv1=new TextView(this);
                 tv1.setText(v1+"\t\t\t\t");
                 tv1.setGravity(Gravity.CENTER);
